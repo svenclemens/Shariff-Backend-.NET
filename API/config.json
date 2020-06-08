@@ -1,0 +1,13 @@
+{
+	"Domains":[
+			"www.your-website.com",
+			"your-website.com"
+		],
+	"ServiceData":[
+			{
+				"ServiceName":"Facebook",
+				"AppId":"foo",
+				"Secret":"bar"
+			}
+	]
+}
