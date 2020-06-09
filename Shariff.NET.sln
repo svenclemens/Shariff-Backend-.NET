@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend", "Backend\Backend.csproj", "{CC3D26FA-3CE7-477C-B065-F7BB587E74CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend", "Backend\Backend.csproj", "{CC3D26FA-3CE7-477C-B065-F7BB587E74CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shariff", "API\shariff.csproj", "{1687ED2E-8ED5-4739-A20F-FAF48F3F0D57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{1687ED2E-8ED5-4739-A20F-FAF48F3F0D57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFrontend", "TestFrontend\TestFrontend.csproj", "{8FB9D7E9-E3D4-4AF9-8B2F-3023D0445600}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestFrontend", "TestFrontend\TestFrontend.csproj", "{8FB9D7E9-E3D4-4AF9-8B2F-3023D0445600}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{CC3D26FA-3CE7-477C-B065-F7BB587E74CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -58,5 +55,11 @@ Global
 		{8FB9D7E9-E3D4-4AF9-8B2F-3023D0445600}.Release|x64.Build.0 = Release|Any CPU
 		{8FB9D7E9-E3D4-4AF9-8B2F-3023D0445600}.Release|x86.ActiveCfg = Release|Any CPU
 		{8FB9D7E9-E3D4-4AF9-8B2F-3023D0445600}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4BFEFDB6-D640-4DA0-A8B4-9DE0D79E3A21}
 	EndGlobalSection
 EndGlobal
