@@ -22,6 +22,10 @@ public class BackendManager{
     public string Get(string url){
         string cacheKey = GetMD5Hash($@"{url}{BaseCacheKey}");
 
+        if(!url.StartsWith(@"http")) {
+            url = @"https://" + url;
+        }
+
         if(!Uri.TryCreate(url, UriKind.Absolute, out _)){
             return string.Empty;
         }
@@ -33,8 +37,15 @@ public class BackendManager{
         var results = new Dictionary<IService, System.Net.HttpWebResponse>();
         // TODO: Rewrite this to run parallel
         foreach(var currentService in this.Services){
-            var request = System.Net.HttpWebRequest.Create(url);
-            results[currentService] = (System.Net.HttpWebResponse)request.GetResponse();
+            var request = currentService.GetRequest(url);
+            try
+            {
+                results[currentService] = (System.Net.HttpWebResponse)request.GetResponse();
+            }
+            catch (System.Net.WebException ex)
+            {
+                results[currentService] = (System.Net.HttpWebResponse)ex.Response;
+            }
         }
 
         var counts = new Dictionary<string, int>();
