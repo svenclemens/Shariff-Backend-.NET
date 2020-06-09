@@ -2,6 +2,10 @@ using System;
 using System.Text.Json;
 
 public class Buffer : Request, IService {
+
+    public Buffer() : base() { }
+    public Buffer(ServiceConfig _config) : base(_config) { }
+
     public string GetName(){
         return @"buffer";
     }

@@ -2,6 +2,8 @@ using System;
 using System.Text.Json;
 
 public class Pinterest : Request, IService {
+    public Pinterest() : base() { }
+    public Pinterest(ServiceConfig _config) : base(_config) { }
     public string GetName(){
         return @"pinterest";
     }

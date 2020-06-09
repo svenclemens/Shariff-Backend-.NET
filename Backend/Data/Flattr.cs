@@ -2,6 +2,9 @@ using System;
 using System.Text.Json;
 
 public class Flattr : Request, IService {
+    public Flattr() : base() { }
+    public Flattr(ServiceConfig _config) : base(_config) { }
+
     public string GetName(){
         return @"flattr";
     }

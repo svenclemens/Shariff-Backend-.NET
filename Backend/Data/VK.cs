@@ -2,6 +2,8 @@ using System;
 using System.Text.Json;
 
 public class VK : Request, IService {
+    public VK() : base() { }
+    public VK(ServiceConfig _config) : base(_config) { }
     public string GetName(){
         return @"vk";
     }

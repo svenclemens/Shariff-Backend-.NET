@@ -2,6 +2,8 @@ using System;
 using System.Text.Json;
 
 public class StumbleUpon : Request, IService {
+    public StumbleUpon() : base() { }
+    public StumbleUpon(ServiceConfig _config) : base(_config) { }
     public string GetName(){
         return @"stumbleupon";
     }

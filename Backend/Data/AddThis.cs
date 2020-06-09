@@ -2,6 +2,9 @@ using System;
 using System.Text.Json;
 
 public class AddThis : Request, IService {
+    public AddThis() : base() { }
+    public AddThis(ServiceConfig _config) : base(_config) { }
+
     public string GetName(){
         return @"addthis";
     }

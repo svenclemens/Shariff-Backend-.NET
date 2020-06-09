@@ -2,6 +2,10 @@ using System;
 using System.Text.Json;
 
 public class Facebook : Request, IService {
+
+    public Facebook() : base() { }
+    public Facebook(ServiceConfig _config) : base( _config) { }
+
     public string GetName(){
         return @"facebook";
     }

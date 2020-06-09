@@ -1,6 +1,9 @@
 using System;
 using System.Text.Json;
 public class Xing : Request, IService {
+    public Xing() : base() { }
+    public Xing(ServiceConfig _config) : base(_config) { }
+
     public string GetName(){
         return @"xing";
     }

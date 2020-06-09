@@ -2,6 +2,8 @@ using System;
 using System.Text.Json;
 
 public class Reddit : Request, IService {
+    public Reddit() : base() { }
+    public Reddit(ServiceConfig _config) : base(_config) { }
     public string GetName(){
         return @"reddit";
     }
