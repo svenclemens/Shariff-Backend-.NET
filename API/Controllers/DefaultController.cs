@@ -23,7 +23,7 @@ namespace shariff.Controllers
                 Configuration = config;
             } else {
                 Configuration = new BackendConfig(){
-                    Domains = new [] {/*@"www.default-site.com"*/},
+                    Domains = Array.Empty<string>(),
                     ServiceData = new [] {new ServiceConfig(){ ServiceName = @"facebook", AppId = @"foo", Secret = @"bar"} }
                 };
             }
@@ -48,7 +48,13 @@ namespace shariff.Controllers
         }
 
         [HttpGet]
-        public string Get(string url)
+        public async Task<ActionResult<string>> Get()
+        {
+            return string.Empty;
+        }
+
+        [HttpGet("{url}")]
+        public async Task<ActionResult<string>> GetInteractions(string url)
         {
             Response.Headers.Add(@"Content-type", @"application/json");
             var backend =  new Backend.Backend(Configuration);
