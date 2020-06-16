@@ -47,14 +47,16 @@ namespace shariff.Controllers
             return true;
         }
 
-        [HttpGet]
+        [HttpGet()]
+        [Route("")]
         public async Task<ActionResult<string>> Get()
         {
             return string.Empty;
         }
 
-        [HttpGet("{url}")]
-        public async Task<ActionResult<string>> GetInteractions(string url)
+        [HttpGet()]
+        [Route("/interactions/")]
+        public async Task<ActionResult<string>> GetInteractions([FromQuery(Name = @"url")]string url = @"")
         {
             Response.Headers.Add(@"Content-type", @"application/json");
             var backend =  new Backend.Backend(Configuration);
